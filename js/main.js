@@ -14,7 +14,6 @@ $('.cubes').hover(
     if($('.name-block.active')[0]) {
       $('.name-block.active').removeClass('active');
     }
-    console.log('off');
   }
 );
 

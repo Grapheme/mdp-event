@@ -96,7 +96,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+a:focus,
+a:active {
+    outline: none;
+}
 html {
     font: 14px 'Roboto', sans-serif;
 }
@@ -798,6 +801,9 @@ footer .container {
          -o-transform: translateY(0px) rotate(-45deg);
             transform: translateY(0px) rotate(-45deg);
 }
+.cubes {
+    position: relative;
+}
 .name-block {
     margin: 0 0 15px;
 
@@ -805,8 +811,27 @@ footer .container {
     -moz-perspective: 1000px;
     -ms-perspective: 1000px; 
     perspective: 1000px;
-
 }
+.cube-link {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 300px;
+}
+.link-1 {
+    top: 0;
+}
+.link-2 {
+    top: 315px;
+}
+.link-3 {
+    top: 630px;
+}
+.link-4 {
+    top: 945px;
+}
+
 #cube {
   width: 100%;
   height: 100%;
@@ -862,6 +887,9 @@ footer .container {
 .name-block.active #cube {
     -webkit-transform: translateZ( -600px ) rotateY(-90.1deg);
     transform: translateZ( -600px ) rotateY(-90.1deg);
+}
+.name-block.active + .cube-link {
+    z-index: 100;
 }
 
 /* ==========================================================================
