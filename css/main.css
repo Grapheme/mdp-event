@@ -452,7 +452,8 @@ nav {
     width: 156px;
     height: 89px;
 
-    background: url(../img/sprites.png) -150px -92px;
+    background: url("../img/sprites.png") repeat scroll -136px -89px #000;
+    border-radius: 6px;
 }
 .illust {
     float: right;
